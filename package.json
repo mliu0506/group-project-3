@@ -2,9 +2,10 @@
   "name": "sharebox",
   "version": "1.0.0",
   "description": "\"tool sharing website\"",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "mongoose": "^5.2.14"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
