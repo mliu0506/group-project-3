@@ -28,6 +28,6 @@ app.get("*", (req, res) => {
 
 
 //Connecting to server 3000
-app.listen(()=>{
+app.listen(PORT, ()=>{
     console.log(`Server is listening to ${PORT}`);
 })
