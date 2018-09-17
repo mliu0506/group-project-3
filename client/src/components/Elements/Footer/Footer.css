@@ -1,0 +1,45 @@
+.footer {
+    align-items: center;
+    background-color: #4e8ad8e2;
+    color: white;
+    display: flex;
+    height: 50px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.0rem;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 999;
+    padding: 0 2%;
+    -webkit-box-shadow: 0px -3px 10px 1px rgba(0,0,0,0.71);
+    -moz-box-shadow: 0px -3px 10px 1px rgba(0,0,0,0.71);
+    box-shadow: 0px -3px 10px 1px rgba(0,0,0,0.71);
+    font-family: var(--font-Montserrat);
+}
+
+
+.footer p {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Screens larger than 320 */
+@media (min-width: 700px) {
+    .footer {
+        font-size: 1.2rem;
+        width: calc(100vw + 17px);
+        overflow-x: hidden;
+        margin-left: -8px;
+    }
+}
+
+
+/* Screens larger than 320 */
+@media (min-width: 1000px) {
+    .footer {
+        font-size: 1.4rem;
+    }
+}
