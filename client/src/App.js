@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import ClipboardJS from "clipboard";
 import Home from "./pages/Home";
+import MapPage from "./pages/MapPage"
 import Rentals from "./pages/Rentals";
 import ShoppingCart from "./pages/ShoppingCart";
 import Profile from "./pages/Profile";
@@ -174,6 +175,21 @@ class App extends Component {
                 </Fragment>
               )}
             />
+
+            <Route exact path="/map"
+              render={routeProps=>(
+                <Fragment>
+                  <MapPage
+                    {...routeProps}
+                    updateUser={this.updateUser}
+                    loggedIn={this.state.loggedIn}
+                    firstName={this.state.firstName}
+                    logout={this.logout}
+                  />
+                </Fragment>
+              )}
+            />
+
             <Route exact path="/rentals"
               render={routeProps => (
                 <Fragment>
