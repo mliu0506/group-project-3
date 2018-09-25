@@ -23,8 +23,8 @@ const rentalSeed = [
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736122/hand-troweljpg.jpg",
     type: "rental",
-    latitude:43.6532,
-    longitude:-79.3832,
+    latitude:43.666676,
+    longitude:-79.398458,
   },
   {
     name: 'Pruning Shears',
@@ -40,8 +40,8 @@ const rentalSeed = [
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736123/pruning-shears.jpg",
     type: "rental",
-    latitude:43.6532,
-    longitude:-79.3840,
+    latitude:43.660011,
+    longitude:-79.394834,
   },
   {
     name: 'Rake',
@@ -57,8 +57,8 @@ const rentalSeed = [
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736123/rake.jpg",
     type: "rental",
-    latitude:43.6532,
-    longitude:-79.3825,
+    latitude:43.659681,
+    longitude:-79.4007,
   },
   {
     name: 'Garden Spade',
@@ -74,8 +74,8 @@ const rentalSeed = [
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736123/garden-spade.jpg",
     type: "rental",
-    latitude:43.65,
-    longitude:-79.38,
+    latitude:43.663908,
+    longitude:-79.394486,
   },
   {
     name: 'Garden Hoe',
@@ -91,8 +91,8 @@ const rentalSeed = [
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736123/garden-hoe.jpg",
     type: "rental",
-    latitude:43.6540,
-    longitude:-79.3832,
+    latitude:43.664485,
+    longitude:-79.399693,
   },
   {
     name: 'Loppers',
@@ -108,8 +108,8 @@ const rentalSeed = [
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736123/loppers.jpg",
     type: "rental",
-    latitude:43.6525,
-    longitude:-79.3850,
+    latitude:43.65988,
+    longitude:-79.390477,
   }
 ];
 
