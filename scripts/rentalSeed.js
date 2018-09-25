@@ -22,7 +22,9 @@ const rentalSeed = [
     condition: 'Good',
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736122/hand-troweljpg.jpg",
-    type: "rental"
+    type: "rental",
+    latitude:43.6532,
+    longitude:-79.3832,
   },
   {
     name: 'Pruning Shears',
@@ -37,7 +39,9 @@ const rentalSeed = [
     condition: 'New',
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736123/pruning-shears.jpg",
-    type: "rental"
+    type: "rental",
+    latitude:43.6532,
+    longitude:-79.3840,
   },
   {
     name: 'Rake',
@@ -52,7 +56,9 @@ const rentalSeed = [
     condition: 'Good',
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736123/rake.jpg",
-    type: "rental"
+    type: "rental",
+    latitude:43.6532,
+    longitude:-79.3825,
   },
   {
     name: 'Garden Spade',
@@ -67,7 +73,9 @@ const rentalSeed = [
     condition: 'Disrepair',
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736123/garden-spade.jpg",
-    type: "rental"
+    type: "rental",
+    latitude:43.65,
+    longitude:-79.38,
   },
   {
     name: 'Garden Hoe',
@@ -82,7 +90,9 @@ const rentalSeed = [
     condition: 'Working',
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736123/garden-hoe.jpg",
-    type: "rental"
+    type: "rental",
+    latitude:43.6540,
+    longitude:-79.3832,
   },
   {
     name: 'Loppers',
@@ -97,7 +107,9 @@ const rentalSeed = [
     condition: 'Working',
     images: [],
     displayImageUrl: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1536736123/loppers.jpg",
-    type: "rental"
+    type: "rental",
+    latitude:43.6525,
+    longitude:-79.3850,
   }
 ];
 

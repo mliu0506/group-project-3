@@ -10,7 +10,7 @@ import {
 } from 'react-google-maps';
 
 /*using recompose to simplify the component*/
-const MapComponent = compose(
+const Map = compose(
     withProps({
         /*Developer Mode URL*/
         googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
@@ -25,23 +25,25 @@ const MapComponent = compose(
 )((props)=>
     <GoogleMap
         /*Place default settings here*/
-        defaultZoom={8}
-        defaultCenter={{ lat: 29.5, lng: -95 }}
+        defaultZoom={15}
+        defaultCenter={{ lat: 43.6532, lng: -79.3832 }}
     >
         {/*Marker props handler*/}
         {props.markers.map(marker =>{
+            //console.log("lat: "+ marker.latitude.$numberDecimal);
             const onClick = props.onClick.bind(this,marker)
             return (
                 <Marker
-                    key={marker.id}
+                    key={marker._id}
                     onClick={onClick}
-                    position={{lat:marker.latitude, lng: marker.longitude}}
+                    position={{lat:parseFloat(marker.latitude.$numberDecimal), lng: parseFloat(marker.longitude.$numberDecimal)}}
                 >
                     {/*Place Marker data inside InfoWindow*/}
                     {props.selectedMarker === marker && 
                         <InfoWindow>
                             <div>
-                                {marker.shelter}
+                                {marker.name}
+                                <img src={marker.displayImageUrl} alt="" />
                             </div>
                         </InfoWindow>
                     }
@@ -50,39 +52,5 @@ const MapComponent = compose(
         })}
     </GoogleMap>
 )
-
-class Map extends Component{
-    /*Implement States here*/
-    constructor(props) {
-        super(props)
-        this.state = {
-            shelters: [],
-            selectedMarker: false
-        }
-    }
-
-    /*load data into here*/
-    componentDidMount() {
-        fetch("https://api.harveyneeds.org/api/v1/shelters?limit=20")
-          .then(r => r.json())
-          .then(data => {
-            this.setState({ shelters: data.shelters })
-          })
-    }
-    handleClick = (marker, event) => {
-        // console.log({ marker })
-        this.setState({ selectedMarker: marker })
-    }
-
-    render(){
-        return(
-            <MapComponent
-                selectedMarker={this.state.selectedMarker}
-                markers={this.state.shelters}
-                onClick={this.handleClick}
-            />
-        )
-    } 
-}
 
 export default Map;

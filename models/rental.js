@@ -30,7 +30,9 @@ const rentalSchema = new Schema({
   }],
   displayImageUrl: String,
   note: String,
-  type: String
+  type: String,
+  latitude: Schema.Types.Decimal128,
+  longitude: Schema.Types.Decimal128,
 });
 
 const Rental = mongoose.model('Rental', rentalSchema);
