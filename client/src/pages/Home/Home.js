@@ -55,6 +55,8 @@ class Home extends Component {
                               <br></br>
                               It is all about sharing, helping out your neighbourhood in need!</span>
                         </h3>
+                        <br/>
+                        <Link className="btn btn-primary" to="/map" role="button">Find Tools</Link>
                     </div>
                 </div>
             </div>

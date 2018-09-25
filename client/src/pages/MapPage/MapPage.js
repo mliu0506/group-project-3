@@ -5,7 +5,6 @@ import Map from "../../components/Map/Map";
 import API from '../../utils/API';
 
 class MapPage extends Component{
-    //Implement States here
     constructor(props) {
         super(props)
         this.state = {
@@ -14,7 +13,7 @@ class MapPage extends Component{
         }
     }
 
-    //get json data
+    //get json data of all rentals
     getAllRentals = () =>{
         API.getAllRentals()
             .then(res=>{
@@ -24,7 +23,6 @@ class MapPage extends Component{
             .catch(err=>console.log(err));
     }
 
-    //load data into here
     componentDidMount() {
         this.getAllRentals();
     }
