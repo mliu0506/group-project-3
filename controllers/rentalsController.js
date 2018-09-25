@@ -152,7 +152,9 @@ function filterRentalItemData(dbModel) {
       maker: element.maker,
       dailyRate: element.dailyRate,
       reservations: element.reservations,
-      displayImageUrl: element.displayImageUrl
+      displayImageUrl: element.displayImageUrl,
+      latitude: element.latitude,
+      longitude: element.longitude
     }
     rentalArray.push(rentalObject);
   }
