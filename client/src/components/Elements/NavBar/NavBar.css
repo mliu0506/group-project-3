@@ -1,0 +1,180 @@
+/*  NavBar.css FILE */
+
+/* General navbar styling */
+
+.navbar {
+    align-items: center;
+    /* background-color: rgba(129, 129, 129, 0.75); */
+    background-color: #4e8ad8e2;
+    color: white;
+    display: flex;
+    height: 55px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    justify-content: space-evenly;
+    margin: 0 0 5px 0;
+    position: fixed;
+    width: 100%;
+    text-decoration: none;
+    z-index: 999;
+    -webkit-box-shadow: 0px 7px 10px 1px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 0px 7px 10px 1px rgba(0, 0, 0, 0.71);
+    box-shadow: 0px 7px 10px 1px rgba(0, 0, 0, 0.71);
+}
+
+
+.navbar .brand-logo, .links {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+}
+/*
+
+.navbar .brand-logo {
+    justify-content: center;
+    width: 30%;
+    margin: 3px 5px;
+}
+*/
+.navbar .links {
+    display: none;
+
+}
+
+
+.logo-fmt {
+    height: 45px;
+    max-width: 80px;
+}
+
+.navbar .links a, .brand-logo a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-Montserrat);
+}
+
+.navbar .links a:hover {
+    padding-bottom: 2px;
+    border-bottom: solid white 1px;
+    transform: scale(1.1);
+}
+
+.links>.btn-link .brand-logo>.btn-link:hover {
+    /* text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 5px #fff, 0 0 6px #fff; */
+    border-bottom: solid white 1px;
+}
+
+/* .links>.btn-link:hover, .brand-logo>.btn-link:hover {
+    text-shadow: 0 0 2px #000, 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #fff, 0 0 25px #fff;
+} */
+
+/* Side Bar Styling */
+
+.hamburger-btns {
+    /* height: 50px; */
+    /* width: 50px; */
+    margin: 0 3%;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.hamburger, .cross {
+    display: none;
+    background-color: gainsboro;
+    color: #999;
+    border: 2px solid #999;
+    font-size: 1.0em;
+    border-radius: 20px;
+    font-weight: bold;
+    outline: none;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    padding: 0 5px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hamburger {
+    display: flex;
+}
+
+.cross {
+    font-size: 1.05em;
+}
+
+/* SideBar Pop-out Menu */
+
+.menu {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    font-weight: bold;
+    width: 45%;
+    /* background-color:#303185ec; */
+    /* background-color: rgba(78, 80, 216, 0.888); */
+    background-color: #4e8ad8e2;
+    /* background-color: rgba(129, 129, 129, 0.95); */
+    position: fixed;
+    top: 0px;
+    /* top: 55px; */
+    right: 0;
+    bottom: 0;
+    padding: 65px 5px;
+    z-index: -100;
+    flex-direction: column;
+    text-align: Left;
+    -webkit-transition: opacity 400ms, visibility 400ms;
+    transition: opacity 400ms, visibility 400ms;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-box-shadow: 0px 7px 10px 1px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 0px 7px 10px 1px rgba(0, 0, 0, 0.71);
+    box-shadow: 0px 7px 10px 1px rgba(0, 0, 0, 0.71);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.menu a, .menu button {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+.header-slidebar {
+    height: 50px;
+    width: 100%;
+    background: green;
+}
+
+/* Media Queries */
+
+/* Screens larger than 320 */
+
+@media (min-width: 320px) {}
+
+/* Screens larger than 1000 */
+
+@media (min-width: 1000px) {
+    .navbar .links {
+        display: flex;
+        width: 70%;
+    }
+    .menu, .cross, .hamburger, .hamburger-btns {
+        display: none;
+    }
+}
+
+/* Screens larger than 31400 */
+
+@media (min-width: 1400px) {
+    .logo-fmt {
+        max-width: 115px;
+    }
+}

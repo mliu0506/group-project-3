@@ -1,0 +1,24 @@
+.btn-avail {
+  height: 28px;
+  font-family: Arial;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  color: #454545;
+  font-weight: bold;
+  background: transparent;
+  padding: 4px 9px 4px 36px;
+  background-image: url("./cal.png");
+  background-position: 7px;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  outline: transparent;
+  position: relative;
+}
+
+.btn-avail:hover {
+  text-decoration: none;
+}

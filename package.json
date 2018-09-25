@@ -1,30 +1,48 @@
 {
-  "name": "sharebox",
+  "name": "sharebox-react",
   "version": "1.0.0",
-  "description": "\"tool sharing website\"",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mliu0506/group-project-3.git"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/rentalSeed.js && node scripts/categorySeed.js && node scripts/userSeed.js",
+    "install": "cd client && yarn install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mliu0506/group-project-3/issues"
-  },
-  "homepage": "https://github.com/mliu0506/group-project-3#readme",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "mongoose": "^5.2.14"
-  },
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "clipboard": "^2.0.1",
+    "connect-mongo": "^2.0.1",
+    "date-fns": "^1.29.0",
+    "express": "^4.15.4",
+    "express-session": "^1.15.6",
+    "if-env": "^1.0.4",
+    "moment": "^2.22.2",
+    "mongoose": "^5.0.17",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dd-menu": "^2.0.2",
+    "react-dropzone": "^5.1.0",
+    "react-onclickoutside": "^6.7.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-stripe-elements": "^2.0.1",
+    "react-table": "^6.8.6",
+    "react-toggle": "^4.0.2",
+    "stripe": "^6.3.0",
+    "superagent": "^3.8.3"
   }
 }

@@ -1,0 +1,172 @@
+/* ShoppingCart.css File */
+
+/* general styling */
+
+#shopping-cart-page {
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#shopping-cart-page .body-container {
+  background: transparent;
+  min-height: calc(100vh - 50px);
+  padding-left: unset;
+  padding-right: unset;
+}
+
+.body-container .shopping-cart-header {
+  width: 100%;
+  text-align: center;
+  margin: 100px 0 50px 0;
+}
+
+.payment-container {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+.payment-container .checkout > div {
+  margin: 10px 0 20px 0;
+}
+
+.payment-container input {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.cart-page-container {
+  padding: 10px;
+  width: 100%;
+  margin: auto;
+}
+
+.cart-page-container .cart-items {
+  width: 100%;
+}
+
+.cart-page-container .cart-items > div {
+  background-color: #ffffff8a;
+  margin: 15px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.cart-page-container .cart-items > div:last-child {
+  background: transparent;
+  margin-bottom: 50px;
+  margin-top: -10px;
+}
+
+.cart-page-container .cart-items > div > * {
+  margin-bottom: 5px;
+}
+
+.cart-page-container .cart-items > div > h2 {
+  border-bottom: 2px solid #4e8ad8e2;
+}
+
+div .checkout-proceed {
+  width: 100%;
+}
+
+.chkoutDisabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.empty-cart {
+  text-align: center;
+  color: black;
+  margin-top: 50px;
+}
+
+div .checkout-proceed button {
+  font-family: var(--font-Raleway);
+  border: 1px solid #41ba41e2;
+  padding: 7px 14px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 20px 20px #41ba41e2 inset, 0 0 0 0 #41ba41e2;
+  box-shadow: 0 0 20px 20px #41ba41e2 inset, 0 0 0 0 #41ba41e2;
+  -webkit-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  text-decoration: none;
+  margin: 0 auto 50px auto;
+  float: right;
+}
+
+div .checkout-proceed button:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 5px #41ba41e2 inset, 0 0 5px #41ba41e2;
+  box-shadow: 0 0 5px #3fb53fe2 inset, 0 0 5px #41ba41e2;
+  color: #41ba41e2;
+}
+
+.cart-page-container .cart-items > div .remove-reservation {
+  font-family: var(--font-Raleway);
+  border: 1px solid #e34d3ae2;
+  padding: 7px 14px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 20px 20px #e34d3ae2 inset, 0 0 0 0 #e34d3ae2;
+  box-shadow: 0 0 20px 20px #e34d3ae2 inset, 0 0 0 0 #e34d3ae2;
+  -webkit-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  text-decoration: none;
+}
+
+.cart-page-container .cart-items > div .remove-reservation:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px #e34d3ae2 inset, 0 0 5px #e34d3ae2;
+  box-shadow: 0 0 5px #e34d3ae2 inset, 0 0 5px #e34d3ae2;
+  color: #e34d3ae2;
+}
+
+.no-confirm {
+  display: none;
+}
+
+@media (min-width: 450px) {
+  .payment-container {
+    width: 400px;
+    margin: auto;
+  }
+  .cart-page-container {
+    width: 400px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 675px) {
+  #shopping-cart-page .body-container {
+    width: 660px;
+    margin: auto;
+  }
+  .payment-container {
+    width: 320px;
+    float: left;
+  }
+  .cart-page-container {
+    width: 320px;
+    float: right;
+  }
+  .cart-page-container .cart-items > div:first-child {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 880px) {
+  #shopping-cart-page .body-container {
+    width: 840px;
+  }
+  .cart-page-container {
+    width: 500px;
+  }
+}
