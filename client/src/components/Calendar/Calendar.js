@@ -131,7 +131,7 @@ class Calendar extends Component {
     return (
       <div className="row flex-middle">
         <div className="column column-center viewing">
-          {this.props.unavailableName ? <span>Availability for <text style={{ fontWeight: "bold" }}>{this.props.unavailableName}</text>.</span> : null}
+          {this.props.unavailableName ? <span style={{ fontWeight: "bold" }}>Availability for  {this.props.unavailableName}.</span> : null}
         </div>
       </div>
     );
