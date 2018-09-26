@@ -1,0 +1,20 @@
+/*Map.css File*/
+
+.infoContainer{
+    text-align: center;
+    padding: 5px;
+    flex-direction: row;
+}
+
+.info-img-container{
+    margin: 2px;
+    padding: 5px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: 1px inset darkgray;
+}
+
+.info-img-container img {
+    height: 100px;
+  }

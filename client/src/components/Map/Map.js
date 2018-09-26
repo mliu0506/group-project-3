@@ -8,6 +8,7 @@ import {
     Marker,
     InfoWindow
 } from 'react-google-maps';
+import "./Map.css";
 
 /*using recompose to simplify the component*/
 const Map = compose(
@@ -26,7 +27,7 @@ const Map = compose(
     <GoogleMap
         /*Place default settings here*/
         defaultZoom={15}
-        defaultCenter={{ lat: 43.6532, lng: -79.3832 }}
+        defaultCenter={{ lat: 43.660527, lng: -79.396762 }}
     >
         {/*Marker props handler*/}
         {props.markers.map(marker =>{
@@ -42,9 +43,13 @@ const Map = compose(
                     {/*Place Marker data inside InfoWindow*/}
                     {props.selectedMarker === marker && 
                         <InfoWindow>
-                            <div>
-                                {marker.name}
-                                <img src={marker.displayImageUrl} alt="" />
+                            <div className="infoContainer">
+                                <div className="info-img-container">
+                                    <img src={marker.displayImageUrl} alt="" />
+                                </div>
+                                <h3>{marker.name}</h3>
+                                <h4>{marker.category}</h4>
+                                <p>Daily rate: ${parseFloat(marker.dailyRate.$numberDecimal).toFixed(2)}</p>
                             </div>
                         </InfoWindow>
                     }
