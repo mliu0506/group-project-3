@@ -13,9 +13,9 @@ import {
 const Map = compose(
     withProps({
         /*Developer Mode URL*/
-        googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
+        //googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
         /*Production URL*/
-        //googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${KEY-HERE}&v=3.exp&libraries=geometry,drawing,places`,
+        googleMapURL: `https://maps.googleapis.com/maps/api/js?key=AIzaSyD5v1aWzlGtP2XlvaQ7P-xRMZBm1Xe24Mo&v=3.exp&libraries=geometry,drawing,places`,
         loadingElement: <div style={{height: '100%'}}/>,
         containerElement: <div style={{height: '100vh'}}/>,
         mapElement: <div style={{height:'100%'}}/>
@@ -32,6 +32,7 @@ const Map = compose(
         {props.markers.map(marker =>{
             //console.log("lat: "+ marker.latitude.$numberDecimal);
             const onClick = props.onClick.bind(this,marker)
+            
             return (
                 <Marker
                     key={marker._id}

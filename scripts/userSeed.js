@@ -19,12 +19,12 @@ const userSeed = [
     firstName: "Michael",
     lastName: "Liu",
     email: "mliu@gmail.com",
-    street: "14 Carlton Road",
+    street: "123 Any Road",
     city: "Markham",
     province: "ON",
     postalCode: "L3R-1Z2",
     phone: "6473232268",
-    photo: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1537108233/ft1lrwqtgvor6ojfgx9g.jpg",
+    photo: "https://res.cloudinary.com/dvp0y7ati/image/upload/v1537352099/tuljkzsaolme5uno0xsq.jpg",
     reservations: [],
     pastRentals: []
   }
