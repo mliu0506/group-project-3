@@ -105,7 +105,7 @@ export default {
   removeRentalReservation: function (reservationId, reservationData) {
     return axios.put(`/api/rentals/remove/${reservationId}`, reservationData);
   },
-
+  
   //CATEGORY ROUTES
   // Gets all categories
   getAllCategories: function () {

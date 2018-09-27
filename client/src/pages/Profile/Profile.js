@@ -7,24 +7,31 @@ import { ChangePwForm } from "./../../components/AuthForms";
 import { UserUpdateForm } from "./../../components/AuthForms";
 import Footer from "../../components/Elements/Footer";
 import dateFns from "date-fns";
+
+import { Link } from "react-router-dom";
 import "./Profile.css"
 
 class Profile extends Component {
-  state = {
-    modal: {
-      isOpen: false,
-      body: "",
-      buttons: ""
-    },
-    loadingModalOpen: false,
-    userData: [],
-    reservations: [],
-    pastRentals: [],
-    formsShow: false,
-    pastRentalsShow: false,
-    userPwForm: false,
-    userDataForm: false
-  };
+  
+    
+    state = {
+      modal: {
+        isOpen: false,
+        body: "",
+        buttons: ""
+      },
+      loadingModalOpen: false,
+      userData: [],
+      reservations: [],
+      pastRentals: [],
+      formsShow: false,
+      pastRentalsShow: false,
+      userPwForm: false,
+      userDataForm: false
+    };
+  
+  
+  
 
   componentWillMount() {
     this.getUserProfileData();
@@ -137,7 +144,7 @@ class Profile extends Component {
         </Fragment>
     })
   }
-
+ 
   cancelReservation = reservation => {
     this.closeModal();
     this.toggleLoadingModal();
@@ -222,7 +229,7 @@ class Profile extends Component {
                 </div>
               )
             }
-
+            <Link className="btn btn-primary" to="/addProduct" role="button">Add Product</Link>
 
             {this.state.formsShow ? null : (
               <div className="reservations-container">
