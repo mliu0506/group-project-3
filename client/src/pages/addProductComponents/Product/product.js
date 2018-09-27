@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Modal, Table, ModalHeader,Form, ModalBody, FormGroup,ModalFooter, Label, Input, Container } from "reactstrap";
-// import DropBox from "./Droppic.js";
+import DropBox from "../Droppic";
 import Dropzone from "react-dropzone";
 import request from "superagent";
 import API from "../../../utils/productApi";
@@ -108,6 +108,7 @@ class Products extends Component {
      item: this.state.item+1
    })
  }
+ 
   // Submit button click , save it to MongoDb Anil's mlab
   handleFormSubmit = event => {
     event.preventDefault();
@@ -120,8 +121,8 @@ class Products extends Component {
         lat:this.state.lat,
         lng:this.state.lng,
         photo: this.state.uploadedFileCloudinaryUrl
-    })
-    .then(res => console.log(this.name, this.maker,this.dailyRate),this.loadProducts())
+    })//commenting this.loadproducts()
+    .then(res => console.log(this.name, this.maker,this.dailyRate))
     .catch(err => console.log(err));
     
   };
@@ -156,7 +157,7 @@ class Products extends Component {
               value={this.state.name}
               onChange={this.handleInputChange}
               name="name"
-              placeholder="product Name"
+              placeholder="Product Name"
               
             />
           </FormGroup>
@@ -164,10 +165,9 @@ class Products extends Component {
             
             <Input  
               value={this.state.maker}
-              
               onChange={this.handleInputChange}
               name="maker"
-              placeholder="product description"
+              placeholder="Product Description"
               
             />
           </FormGroup>
@@ -177,11 +177,9 @@ class Products extends Component {
                 value={this.state.dailyRate}
                 onChange={this.handleInputChange}
                 name="dailyRate"
-                placeholder="daily rate"            
+                placeholder="Daily Rate"            
               />
             </FormGroup>
-
-         
           <FormGroup>
             
             <Input
@@ -189,7 +187,7 @@ class Products extends Component {
               onChange={this.handleInputChange}
               name="category" 
               type="text"     
-              placeholder="category" 
+              placeholder="Category" 
             />
           </FormGroup>  
           <FormGroup>

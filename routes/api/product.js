@@ -7,9 +7,9 @@ const productController = require("../../controllers/productController")
 // @route   GET api/items
 // @desc    Get All Items
 
-router.route("/addProduct")
+router
+    .route("/addProduct")
     .get(productController.findAll)
-    .post(productController.create)
 
 //matches with route("api/items/:id")
 router
@@ -18,7 +18,9 @@ router
     .put(productController.update)
     .delete(productController.remove);
 
-router.route("/addProducts")
+//posting a new product
+router
+    .route("/addProduct")
     .post(productController.create)
 
 
