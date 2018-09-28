@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Button,Modal, ModalHeader, ModalBody, FormGroup,ModalFooter, Container } from "reactstrap";
+import { Button,Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import DropBox from "../Droppic";
 import Dropzone from "react-dropzone";
 import request from "superagent";
@@ -7,7 +7,6 @@ import API from "../../../utils/productApi";
 import NavBar from '../../../components/Elements/NavBar';
 import Footer from '../../../components/Elements/Footer';
 import "./product.css";
-
 // import  ListItem from "./../Components/Listitem";
 // import { List, Listitem } from "./../Components/List";
 // import DeleteButton from "../DeleteButton";
@@ -158,16 +157,17 @@ class Products extends Component {
   }
   render(){
     return(
-    <div>
-      <div className="container-fluid">
-       <div className="row">
+    <Fragment>
+       <div className="container-fluid">
+          <div className="row">
           <NavBar
               loggedIn={this.props.loggedIn}
               logout={this.props.logout}
               location={this.props.location}
             />
+            </div>
         </div>
-      </div>
+        
     <form className="form">
       <div className="form-group">
         <input  className="form-control" value={this.state.name} 
@@ -239,8 +239,8 @@ class Products extends Component {
             </Dropzone>
           </div> 
         </div> 
-        {/* <Footer /> */}
-    </div>
+        <Footer />
+    </Fragment>
    
       
     )
