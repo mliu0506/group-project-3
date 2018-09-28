@@ -224,11 +224,14 @@ class Profile extends Component {
                 <div className="user-info-btn-div">
                   <button onClick={this.toggleEditUserInfoForm}>Edit Profile</button>
                   <button onClick={this.toggleChangePwForm}>Change Password</button>
-                </div>
-              )
-            }
-            <Link className="user-info-btn-div" to="/addProduct" role="button">Add Product</Link>
 
+                </div>
+                
+              )
+              
+            }
+            
+            <Link className="user-info-btn-div" to="/addProduct" role="button">Add Product</Link>
             {this.state.formsShow ? null : (
               <div className="reservations-container">
                 <h2>My Reservations</h2>

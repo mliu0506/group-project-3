@@ -36,8 +36,6 @@ class Products extends Component {
       viewList: false,
       displayImageUrl:"",
       uploadedFile: null,
-      // uploadedFileCloudinaryUrl: "",
-
       lat: 0,
       lng: 0
     };
@@ -54,8 +52,8 @@ class Products extends Component {
       maker:"",
       displayImageUrl:"",
       dailyRate: 0,
-      lat: 0,
-      lng:0
+      latitude: 0,
+      longitude:0
   })
   }
   // loadProducts =()=> {
@@ -79,8 +77,8 @@ class Products extends Component {
       navigator.geolocation.getCurrentPosition(
         position => {
           this.setState({
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
           })
         }
       )
@@ -126,11 +124,11 @@ class Products extends Component {
         category:this.state.category,
         maker: this.state.maker,
         dailyRate: this.state.dailyRate,
-        lat:this.state.lat,
-        lng:this.state.lng,
+        latitude:this.state.latitude,
+        longitude:this.state.longitude,
         displayImageUrl:this.state.displayImageUrl
     })
-    .then(res => this.loadProducts())
+    .then(res => console.log(this.state.lat),this.loadProducts())
     .catch(err => console.log(err));
     
   };
@@ -157,7 +155,7 @@ class Products extends Component {
   }
   render(){
     return(
-    <Fragment>
+     <Fragment>
        <div className="container-fluid">
           <div className="row">
           <NavBar
@@ -167,7 +165,7 @@ class Products extends Component {
             />
             </div>
         </div>
-        
+      
     <form className="form">
       <div className="form-group">
         <input  className="form-control" value={this.state.name} 
@@ -194,13 +192,13 @@ class Products extends Component {
                     placeholder="Daily Rate"/>
           </div>
           <div className="form-group">
-          <input  className="form-control" value={this.state.lat}     
-                    name="lat"  
+          <input  className="form-control" value={this.state.latitude}     
+                    name="latitude"  
                     type="hidden"/>
           </div>
           <div className="form-group">
-          <input  className="form-control" value={this.state.lng} 
-                    name="lng"  
+          <input  className="form-control" value={this.state.longitude} 
+                    name="longitude"  
                     type="hidden"/>
           </div>
           <button className="btn btn-primary" onClick={this.handleFormSubmit}>
@@ -239,10 +237,9 @@ class Products extends Component {
             </Dropzone>
           </div> 
         </div> 
-        <Footer />
-    </Fragment>
-   
-      
+          <Footer />
+        </Fragment>
+        
     )
   }
 }
