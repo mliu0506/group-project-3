@@ -10,7 +10,7 @@ import Login from "./pages/Login";
 import AddPropsToRoute from "./components/AddPropsToRoute";
 import NoMatch from "./pages/NoMatch";
 import Modal from "./components/Elements/Modal";
-import AddProduct from "./pages/addProductComponents/index";
+import AddProduct from "./pages/addProductComponents/Product";
 import API from "./utils/API";
 import "./App.css";
 

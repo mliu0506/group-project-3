@@ -7,7 +7,6 @@ import { ChangePwForm } from "./../../components/AuthForms";
 import { UserUpdateForm } from "./../../components/AuthForms";
 import Footer from "../../components/Elements/Footer";
 import dateFns from "date-fns";
-
 import { Link } from "react-router-dom";
 import "./Profile.css"
 
@@ -190,7 +189,6 @@ class Profile extends Component {
       })
     }
 
-
     return (
       <Fragment>
         <Modal
@@ -229,7 +227,7 @@ class Profile extends Component {
                 </div>
               )
             }
-            <Link className="btn btn-primary" to="/addProduct" role="button">Add Product</Link>
+            <Link className="user-info-btn-div" to="/addProduct" role="button">Add Product</Link>
 
             {this.state.formsShow ? null : (
               <div className="reservations-container">
