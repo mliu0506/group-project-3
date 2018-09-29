@@ -106,6 +106,11 @@ export default {
     return axios.put(`/api/rentals/remove/${reservationId}`, reservationData);
   },
 
+  //load products to database whenever user enter it on the form
+  saveProduct: function(Products) {
+    return axios.post("/api/addProduct", Products);
+  },
+
   //CATEGORY ROUTES
   // Gets all categories
   getAllCategories: function () {
