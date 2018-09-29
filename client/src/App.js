@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import AddPropsToRoute from "./components/AddPropsToRoute";
 import NoMatch from "./pages/NoMatch";
 import Modal from "./components/Elements/Modal";
+import AddProduct from "./pages/addProductComponents/Product";
 import API from "./utils/API";
 import "./App.css";
 
@@ -232,6 +233,20 @@ class App extends Component {
                 </Fragment>
               )}
             />
+            <Route exact path="/addProduct"
+              render={routeProps=>(
+                <Fragment>
+                  <AddProduct
+                    {...routeProps}
+                    updateUser={this.updateUser}
+                    loggedIn={this.state.loggedIn}
+                    firstName={this.state.firstName}
+                    logout={this.logout}
+                  />
+                </Fragment>
+              )}
+            />
+
 
             <PrivateRoute path="/profile" component={AddPropsToRoute(Profile, {
               closeModal: this.closeModal,

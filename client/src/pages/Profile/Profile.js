@@ -7,24 +7,30 @@ import { ChangePwForm } from "./../../components/AuthForms";
 import { UserUpdateForm } from "./../../components/AuthForms";
 import Footer from "../../components/Elements/Footer";
 import dateFns from "date-fns";
+import { Link } from "react-router-dom";
 import "./Profile.css"
 
 class Profile extends Component {
-  state = {
-    modal: {
-      isOpen: false,
-      body: "",
-      buttons: ""
-    },
-    loadingModalOpen: false,
-    userData: [],
-    reservations: [],
-    pastRentals: [],
-    formsShow: false,
-    pastRentalsShow: false,
-    userPwForm: false,
-    userDataForm: false
-  };
+  
+    
+    state = {
+      modal: {
+        isOpen: false,
+        body: "",
+        buttons: ""
+      },
+      loadingModalOpen: false,
+      userData: [],
+      reservations: [],
+      pastRentals: [],
+      formsShow: false,
+      pastRentalsShow: false,
+      userPwForm: false,
+      userDataForm: false
+    };
+  
+  
+  
 
   componentWillMount() {
     this.getUserProfileData();
@@ -137,7 +143,7 @@ class Profile extends Component {
         </Fragment>
     })
   }
-
+ 
   cancelReservation = reservation => {
     this.closeModal();
     this.toggleLoadingModal();
@@ -183,7 +189,6 @@ class Profile extends Component {
       })
     }
 
-
     return (
       <Fragment>
         <Modal
@@ -219,11 +224,14 @@ class Profile extends Component {
                 <div className="user-info-btn-div">
                   <button onClick={this.toggleEditUserInfoForm}>Edit Profile</button>
                   <button onClick={this.toggleChangePwForm}>Change Password</button>
+
                 </div>
+                
               )
+              
             }
-
-
+            
+            <Link className="user-info-btn-div" to="/addProduct" role="button">Add Product</Link>
             {this.state.formsShow ? null : (
               <div className="reservations-container">
                 <h2>My Reservations</h2>

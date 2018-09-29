@@ -1,0 +1,18 @@
+.productTitle  {
+    color:green;
+ }
+ .productDescription  {
+    color:green;
+ }
+ .productRent  {
+    color:green;
+ }
+ #title {
+     color:green;
+     justify-content: center;
+ }
+ .form{
+     margin-top:100px;
+     width:50%;
+     margin-left:10px;
+ }
