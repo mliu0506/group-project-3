@@ -7,6 +7,7 @@ import { ChangePwForm } from "./../../components/AuthForms";
 import { UserUpdateForm } from "./../../components/AuthForms";
 import Footer from "../../components/Elements/Footer";
 import dateFns from "date-fns";
+import { Link } from "react-router-dom";
 import "./Profile.css"
 
 class Profile extends Component {
@@ -198,9 +199,11 @@ class Profile extends Component {
           logout={this.props.logout}
           location={this.props.location}
         />
+        
 
         <div className="page-container">
           <div className="content-container">
+          <Link className="user-info-btn-div" to="/addProduct" role="button"><h2>Add Product</h2></Link>
             <div className="user-info-div">
               <img className="profile-pic" src={photo} ></img>
               <h3>{firstName} {lastName}</h3>
@@ -259,6 +262,7 @@ class Profile extends Component {
                   : <h4>You have no rentals reserved.</h4>}
               </div>
             )}
+
 
             {this.state.pastRentalsShow ?
               <div className="reservations-container past-reservations">

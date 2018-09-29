@@ -11,6 +11,7 @@ import AddPropsToRoute from "./components/AddPropsToRoute";
 import NoMatch from "./pages/NoMatch";
 import Modal from "./components/Elements/Modal";
 import API from "./utils/API";
+import AddProduct from "./pages/ProductPage/AddProductPage";
 import "./App.css";
 
 let isAuthenticated = false;
@@ -228,6 +229,19 @@ class App extends Component {
                     firstName={this.state.firstName}
                     logout={this.logout}
                     loginShow={true}
+                  />
+                </Fragment>
+              )}
+            />
+            <Route exact path="/addProduct"
+              render={routeProps=>(
+                <Fragment>
+                  <AddProduct
+                    {...routeProps}
+                    updateUser={this.updateUser}
+                    loggedIn={this.state.loggedIn}
+                    firstName={this.state.firstName}
+                    logout={this.logout}
                   />
                 </Fragment>
               )}

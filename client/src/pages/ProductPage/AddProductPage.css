@@ -1,0 +1,86 @@
+/* Login.css File */
+
+.header h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.header, .header+div {
+  position: relative;
+  top: 50px;
+  padding: 15px;
+}
+
+#login-forms-container {
+  max-width: 90%;
+  width: 100%;
+  margin: 130px auto 100px auto;
+  padding: 0;
+  border: 1px solid #000;
+  background-color: white;
+}
+
+.login-form-div {
+  border: 1px solid #000;
+  padding: 20px 5px 20px 35px;
+}
+
+.login-form-div h2 {
+  margin-bottom: 40px;
+}
+
+.login-toggle-div {
+  display: flex;
+  border: 1px solid #000;
+}
+
+.login-toggle-btn {
+  width: 50%;
+  background-color: #000;
+  color: #ddd;
+  padding: 10px 0;
+  border: none;
+  outline: transparent;
+}
+
+.login-toggle-btn-light {
+  opacity: .6;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sticky-footer-div {
+  flex: 1 0 auto;
+}
+
+.upload-profile-pic{
+  width: 150px;
+  height: 150px;
+  margin: 5px auto auto 15px;
+  border-radius: 50%;
+  border: 2px #a0bd3e solid;
+  padding: 2px;
+}
+.upload-tool-pic {
+  width: 150px;
+  height: 150px;
+  margin: 5px auto auto 15px;
+  border: 2px #a0bd3e solid;
+  padding: 2px;
+
+}
+
+/* At screens larger than 370px */
+
+@media (max-width: 370px) {
+  .login-form-div {
+    padding: 20px 10px 20px 15px;
+  }
+}
