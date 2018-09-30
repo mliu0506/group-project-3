@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { CardNumberElement, CardExpiryElement, CardCVCElement, injectStripe } from 'react-stripe-elements';
+import { CardNumberElement, CardExpiryElement, CardCVCElement, injectStripe } from "../../utils/API";
 import API from "../../utils/API";
 import Modal from "../../components/Elements/Modal";
 import { Link } from 'react-router-dom';
@@ -215,7 +215,7 @@ class CheckoutForm extends Component {
 
           <div>
             <span className="test">Cardholder's Name</span>
-            <input name="cardHolderName" className="test" type="text" placeholder="Michael Liu" value={this.state.cardHolderName} onChange={(e) => this.handleInputChange(e)} />
+            <input name="cardHolderName" className="test" type="text" placeholder="" value={this.state.cardHolderName} onChange={(e) => this.handleInputChange(e)} />
           </div>
           Card Number
           <CardNumberElement className="input numberInput" />

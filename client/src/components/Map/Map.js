@@ -16,7 +16,7 @@ const Map = compose(
         /*Developer Mode URL*/
         //googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
         /*Production URL*/
-        googleMapURL: `https://maps.googleapis.com/maps/api/js?key=AIzaSyD5v1aWzlGtP2XlvaQ7P-xRMZBm1Xe24Mo&v=3.exp&libraries=geometry,drawing,places`,
+        googleMapURL: ``,
         loadingElement: <div style={{height: '100%'}}/>,
         containerElement: <div style={{height: '100vh'}}/>,
         mapElement: <div style={{height:'100%'}}/>

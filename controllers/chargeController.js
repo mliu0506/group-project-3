@@ -1,5 +1,5 @@
 const db = require('../models');
-const stripe = require("stripe")("sk_test_ToGndTDhqZja5fdFHwdJg0mf");
+const stripe = require("stripe");
 
 module.exports = {
 

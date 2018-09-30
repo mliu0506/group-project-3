@@ -17,8 +17,8 @@ import {
 import "./AddProductPage.css";
 
 //For Uploading Images
-const CLOUDINARY_UPLOAD_PRESET = "ywtrj1y7";
-const CLOUDINARY_UPLOAD_URL = " https://api.cloudinary.com/v1_1/dvp0y7ati/upload";
+const CLOUDINARY_UPLOAD_PRESET = "";
+const CLOUDINARY_UPLOAD_URL = "";
 
 class AddProductPage extends Component {
 
