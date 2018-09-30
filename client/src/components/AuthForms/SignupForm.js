@@ -5,8 +5,8 @@ import API from "../../utils/API";
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
-const CLOUDINARY_UPLOAD_PRESET = 'ywtrj1y7';
-const CLOUDINARY_UPLOAD_URL = ' https://api.cloudinary.com/v1_1/dvp0y7ati/upload';
+const CLOUDINARY_UPLOAD_PRESET = '';
+const CLOUDINARY_UPLOAD_URL = '';
 
 
 export class SignupForm extends Component {
@@ -271,7 +271,7 @@ export class SignupForm extends Component {
             name="postalCode"
             pattern="^[a-zA-Z0-9-]+$"
             label="Postal Code:"
-            placeholder="xxx-xxx"
+            placeholder=""
           />
           </div>
           <div className="group col-md-4">
@@ -282,7 +282,7 @@ export class SignupForm extends Component {
             type="tel"
             pattern="^\d{3}[\-]\d{3}[\-]\d{4}"
             label="Phone Number:"
-            placeholder="xxx-xxx-xxxx"
+            placeholder=""
           />
           </div>
           </div>

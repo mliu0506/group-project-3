@@ -8,7 +8,7 @@ import "./ShoppingCart.css";
 import dateFns from "date-fns"
 import { Link } from 'react-router-dom';
 import CheckoutForm from "../../components/Stripe/CheckoutForm";
-import { StripeProvider, Elements } from 'react-stripe-elements';
+import StripeProvider from "../../components/Stripe/CheckoutForm";
 
 class ShoppingCart extends Component {
   state = {
@@ -239,7 +239,7 @@ class ShoppingCart extends Component {
             </div>
             {this.state.complete === true || this.state.tempReservations.length > 0
               ? <div className="payment-container">
-                <StripeProvider apiKey="pk_test_tJEAUS9fl6V9lGXxAVGbAXLn">
+                <StripeProvider>
                   <Elements>
                     <CheckoutForm
                       btn={() => this.checkout()}
